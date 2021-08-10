@@ -1,153 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tv_pertama"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-
-    <TextView
-        android:id="@+id/tv_angka"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="MASUKAN DUA ANGKA"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="32dp"
-        android:text="Masukan Angka Pertama"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_angka" />
-
-    <EditText
-        android:id="@+id/edt_pertama"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:lines="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/tv_kedua"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:text="Masukan Angka Kedua"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_pertama" />
-
-    <EditText
-        android:id="@+id/edt_kedua"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:lines="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_kedua" />
-
+    
     <Button
-        android:id="@+id/btn_tambah"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/tambah"
+        android:layout_height="wrap_content"
         android:text="+"
-        android:gravity="center"
-        android:textColor="#121111"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_kedua" />
+        android:layout_below="@+id/angka_kedua"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp"
+        android:layout_width="80dp"/>
 
-    <Button
-        android:id="@+id/btn_kurang"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:text="-"
-        android:gravity="center"
-        android:textColor="#121111"
-        android:textSize="25sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_tambah"
-        app:layout_constraintTop_toBottomOf="@+id/edt_kedua" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/angka_pertama"
+        android:hint="Masukan angka pertma"
+        android:textSize="14sp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp"/>
 
-    <Button
-        android:id="@+id/btn_kali"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:text="x"
-        android:gravity="center"
-        android:textColor="#121111"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_bagi"
-        app:layout_constraintTop_toBottomOf="@+id/edt_kedua" />
-
-    <Button
-        android:id="@+id/btn_bagi"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
-        android:text="/"
-        android:gravity="center"
-        android:textColor="#121111"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_kedua" />
-
-    <Button
-        android:id="@+id/btn_bersihkan"
-        android:layout_width="200dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="24dp"
-        android:text="Bersihkan"
-        android:textColor="#121111"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_kurang" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/angka_kedua"
+        android:hint="Masukan angka kedua"
+        android:textSize="14sp"
+        android:layout_below="@+id/angka_pertama"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp"/>
 
     <TextView
-        android:id="@+id/tv_hasil"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:text="HASIL"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_bersihkan" />
+        android:text="MASUKAN DUA ANGKA"
+        android:id="@+id/textView5"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="14sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
     <TextView
-        android:id="@+id/tv_0"
-        android:layout_width="wrap_content"
+        android:id="@+id/hasil"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="0"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_hasil" />
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:textAlignment="center"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:text="HASIL"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/bersihkan"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:text="-"
+        android:layout_height="wrap_content"
+        android:id="@+id/kurang"
+        android:layout_width="80dp"
+        android:layout_alignBaseline="@id/tambah"
+        android:layout_alignBottom="@id/tambah"
+        android:layout_toRightOf="@id/tambah"
+        android:layout_toEndOf="@id/tambah"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BERSIHKAN"
+        android:id="@+id/bersihkan"
+        android:layout_below="@id/tambah"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="/"
+        android:layout_height="wrap_content"
+        android:id="@+id/bagi"
+        android:layout_width="80dp"
+        android:layout_above="@id/bersihkan"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:text="X"
+        android:layout_height="wrap_content"
+        android:id="@+id/kali"
+        android:layout_width="80dp"
+        android:layout_alignBaseline="@id/bagi"
+        android:layout_alignBottom="@id/bagi"
+        android:layout_toLeftOf="@id/bagi"
+        android:layout_toStartOf="@id/bagi"/>
+
+</RelativeLayout>
